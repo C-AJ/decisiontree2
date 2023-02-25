@@ -109,7 +109,7 @@ for ds in dataSets:
        total = len(dbTest)
        correct = 0
        for data in range(len(dbTest)):
-           class_predicted = clf.predict(dbTest)[data]
+           class_predicted = clf.predict([dbTest[data]])[0]
            if class_predicted == dbGround[data]:
                 correct += 1
        accuracy += correct / total
