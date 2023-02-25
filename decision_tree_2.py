@@ -15,7 +15,10 @@ import csv
 
 dataSets = ['contact_lens_training_1.csv', 'contact_lens_training_2.csv', 'contact_lens_training_3.csv']
 
+model = 0
+
 for ds in dataSets:
+    model += 1
     X = []
     Y = []
 
@@ -122,7 +125,7 @@ for ds in dataSets:
     #print the average accuracy of this model during the 10 runs (training and test set).
     #your output should be something like that: final accuracy when training on contact_lens_training_1.csv: 0.2
     #--> add your Python code here
-    print(average_accuracy)
+    print("Model " + str(model) + ": " + str(average_accuracy))
 
 
 
